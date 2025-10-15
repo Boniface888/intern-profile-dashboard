@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Intern Profile — Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="auth-page">
+  <main class="auth-container">
+    <div class="auth-card">
+      <div class="brand">
+        <div class="logo-box">IP</div>
+        <div>
+          <h1>Intern Profile</h1>
+          <p class="muted">Sign in to manage your projects</p>
+        </div>
+      </div>
+
+      <form id="loginForm" class="form">
+        <label class="label">
+          Username
+          <input id="username" type="text" placeholder="Enter username" required />
+        </label>
+
+        <label class="label">
+          Password
+          <input id="password" type="password" placeholder="Enter password" required />
+        </label>
+
+        <div class="form-row">
+          <button class="btn primary" type="submit">Sign In</button>
+        </div>
+
+        <p class="note">For demo purposes any username & password works.</p>
+      </form>
+    </div>
+
+    <footer class="auth-footer">
+      <div class="theme-toggle-small">
+        <button id="toggleThemeSmall" class="btn-ghost">Toggle Theme</button>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

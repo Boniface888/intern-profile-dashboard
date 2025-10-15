@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Intern Profile — Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="top-left">
+      <div class="logo-box">IP</div>
+      <h2>Intern Project Manager</h2>
+    </div>
+
+    <div class="top-right">
+      <button id="themeToggle" class="btn-ghost">Dark / Light</button>
+      <button id="exportBtn" class="btn-ghost">Export Data</button>
+      <button id="logoutBtn" class="btn danger">Logout</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="profile-card">
+        <img src="assets/profile.jpg" alt="Profile" class="profile-pic"/>
+        <h3 id="profileName">Boniface</h3>
+        <p class="muted">Frontend Intern</p>
+        <a id="profileEmail" href="mailto:bonifacesimon888@gmail.com">bonifacesimon888@gmail.com</a>
+      </div>
+
+      <div class="controls">
+        <button id="addProjectBtn" class="btn full primary">Add Project</button>
+        <input id="searchInput" placeholder="Search projects..." />
+      </div>
+
+      <div class="small-note muted">
+        Tip: You can select multiple files or a folder (if your browser supports <code>folder upload</code>).
+      </div>
+    </aside>
+
+    <main class="main">
+      <section class="projects-panel">
+        <div class="panel-head">
+          <h3>My Projects</h3>
+          <div id="projectCount" class="muted"></div>
+        </div>
+
+        <div id="projectList" class="project-grid"></div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Modal: Add / Edit Project -->
+  <div id="modal" class="modal hidden" aria-hidden="true">
+    <div class="modal-content">
+      <header class="modal-header">
+        <h3 id="modalTitle">Add Project</h3>
+        <button id="closeModal" class="btn-ghost">✕</button>
+      </header>
+
+      <form id="projectForm" class="modal-body">
+        <label class="label">
+          Title
+          <input id="title" type="text" required />
+        </label>
+
+        <label class="label">
+          Description
+          <textarea id="description" rows="4" required></textarea>
+        </label>
+
+        <label class="label">
+          Attach files (multiple allowed)
+          <!-- webkitdirectory allows folder upload in browsers that support it -->
+          <input id="files" type="file" multiple webkitdirectory directory />
+        </label>
+
+        <div class="form-row">
+          <button type="submit" class="btn primary">Save</button>
+          <button type="button" id="cancelBtn" class="btn-ghost">Cancel</button>
+        </div>
+
+        <p class="muted small-note">Files are stored locally in your browser (Base64). Avoid extremely large files to keep performance reasonable.</p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
