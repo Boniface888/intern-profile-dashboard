@@ -16,15 +16,14 @@
 
     <div class="top-right">
       <button id="themeToggle" class="btn-ghost" title="Toggle theme">🌗</button>
-      <button id="exportBtn" class="btn-ghost">Export Data</button>
       <button id="logoutBtn" class="btn danger">Logout</button>
     </div>
   </header>
 
   <!-- Main Layout -->
-  <div class="layout">
-    <!-- Sidebar -->
-    <aside class="sidebar">
+  <div class="dashboard-layout">
+    <!-- Sidebar (Profile Section) -->
+    <aside class="profile-sidebar">
       <div class="profile-card">
         <img src="assets/profile.jpg" alt="Profile Picture" class="profile-pic" onerror="this.style.display='none'" />
         <h3 id="profileName">Boniface</h3>
@@ -35,22 +34,37 @@
         <input id="searchInput" type="text" placeholder="Search projects..." />
       </div>
 
-      <p class="small-note muted">
-        💡 Tip: You can attach PDFs, images, and ZIPs. Files are stored locally (Base64). Avoid large uploads.
-      </p>
     </aside>
 
-    <!-- Main Section -->
-    <main class="main">
-      <section class="projects-panel">
-        <div class="panel-head">
-          <h3>My Projects</h3>
-          <div id="projectCount" class="muted">0 projects</div>
+    <!-- Main Content Area -->
+    <div class="main-content">
+      <!-- Learning Section -->
+      <section class="learning-section">
+        <div class="learning-card">
+          <h2>What I’ve Learned During My Internship</h2>
+          <p>
+            During my internship at the Regional Marine Center, I gained a deeper understanding of how Earth Observation (EO) data is used to monitor and manage marine and ocean activities. 
+            I learned how Python programming can be applied to build tools that enhance ocean monitoring and support sustainable marine development. 
+            The experience also strengthened my teamwork and organizational skills, helping me adapt to professional environments and collaborate effectively on projects.
+          </p>
+          <p>
+            This experience has helped me improve my teamwork, problem-solving, and project management skills preparing me for future roles in software development.
+          </p>
         </div>
-
-        <div id="projectList" class="project-grid" aria-live="polite"></div>
       </section>
-    </main>
+
+      <!-- Projects Section -->
+      <main class="main">
+        <section class="projects-panel">
+          <div class="panel-head">
+            <h3>My Projects</h3>
+            <div id="projectCount" class="muted">0 projects</div>
+          </div>
+
+          <div id="projectList" class="project-grid" aria-live="polite"></div>
+        </section>
+      </main>
+    </div>
   </div>
 
   <!-- Modal -->
@@ -82,12 +96,18 @@
           <button type="button" id="cancelBtn" class="btn-ghost">Cancel</button>
         </div>
 
-        <p class="muted small-note">
-          Files are stored locally
-        </p>
+        <p class="muted small-note">Files are stored locally</p>
       </form>
     </div>
   </div>
+
+  <!-- Footer -->
+  <footer class="moving-footer">
+    <div class="footer-text">
+      Welcome to the Intern Project Manager — This page contains my profile and highlights my internship experience at the Regional Marine Center, University of Ghana. 
+      It helps track my projects, allows me to add files, manage files, and document my internship progress efficiently.
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
